@@ -1,2 +1,2 @@
 # TestGit
-testing git
+its temporary repo testing git
