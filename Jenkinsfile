@@ -12,11 +12,7 @@ node
     }
     stage ('Code formatter Uncrustify')
     {
-        bat '''cd uncrustify-0.66.1-win32
-sleep 5
-.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp
-'''
-
+        echo "Code formatter"
     }
     stage ('Build')
     {
