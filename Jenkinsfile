@@ -10,6 +10,16 @@ node
     {
         echo "Static Code Analysis"
     }
+    stage ('Change directory')
+    {
+        dir('C:\\Program Files (x86)\\Jenkins\\workspace\\PipelineTest\\uncrustify-0.66.1-win32') {
+    // some block
+}
+    }
+    stage ('Execute bat')
+    {
+        bat '.\\uncrustifycheck.bat'
+    }
     stage ('Build')
     {
         build 'TestGit'
