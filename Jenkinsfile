@@ -12,7 +12,7 @@ node
     }
     stage ('Code formatter Uncrustify')
     {
-        bat 'C:\\Users\\z003yjnz\\Downloads\\uncrustify-0.66.1-win32\\.\\uncrustifycheck.bat'
+        echo "Code formatter"
     }
     stage ('Build')
     {
