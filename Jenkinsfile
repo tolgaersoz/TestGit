@@ -10,6 +10,10 @@ node
     {
         echo "Static Code Analysis"
     }
+    stage
+    {
+        powershell '.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
+    }
     stage ('Build')
     {
         build 'TestGit'
