@@ -13,7 +13,7 @@ node
     stage ('Change directory')
     {
         dir('.\\Downloads\\uncrustify-0.66.1-win32\\')
-    // some block
+        workspace =pwd()
     }
     stage ('Code formatter Uncrustify')
     {
