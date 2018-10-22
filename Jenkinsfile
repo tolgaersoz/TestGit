@@ -18,7 +18,7 @@ node
     }
     stage ('Execute bat')
     {
-        bat '.\\uncrustifycheck.bat'
+        powershell ' .\\uncrustifycheck.bat'
     }
     stage ('Build')
     {
