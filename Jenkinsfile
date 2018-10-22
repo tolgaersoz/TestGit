@@ -12,7 +12,7 @@ node
     }
     stage ('Code formatter Uncrustify')
     {
-        echo "Code formatter"
+        powershell '.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
     }
     stage ('Build')
     {
