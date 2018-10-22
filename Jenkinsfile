@@ -14,10 +14,6 @@ node
     {
         dir('.\\Downloads\\uncrustify-0.66.1-win32\\')
     }
-    stage ('Code formatter Uncrustify')
-    {
-        bat '.\\uncrustifycheck.bat'
-    }
     stage ('Build')
     {
         build 'TestGit'
