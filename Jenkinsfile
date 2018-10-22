@@ -10,9 +10,14 @@ node
     {
         echo "Static Code Analysis"
     }
+    stage ('Change directory')
+    {
+        dir('.\\Downloads\\uncrustify-0.66.1-win32\\')
+    // some block
+    }
     stage ('Code formatter Uncrustify')
     {
-        powershell '.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
+     echo 'code formatter'
     }
     stage ('Build')
     {
