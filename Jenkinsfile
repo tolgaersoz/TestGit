@@ -13,11 +13,10 @@ node
     stage ('Change directory')
     {
         dir('.\\Downloads\\uncrustify-0.66.1-win32\\')
-        workspace =pwd()
     }
     stage ('Code formatter Uncrustify')
     {
-     echo 'code formatter'
+        bat '.\\uncrustifycheck.bat'
     }
     stage ('Build')
     {
