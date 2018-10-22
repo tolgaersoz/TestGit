@@ -10,6 +10,10 @@ node
     {
         echo "Static Code Analysis"
     }
+    stage ('Code formatter Uncrustify')
+    {
+        bat 'c:\\Users\\z003yjnz\\Downloads\\uncrustify-0.66.1-win32\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
+    }
     stage ('Build')
     {
         build 'TestGit'
