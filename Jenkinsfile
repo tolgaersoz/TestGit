@@ -15,9 +15,10 @@ node
        dir('powershell \'C:\\\\Users\\\\z003yjnz\\\\Downloads\\\\uncrustify-0.66.1-win32\\\\\'') {
     // some block
 }
+    }
+    stage
     {
         bat '..\\..\\..\\..\\Users\\z003yjnz\\Downloads\\uncrustify-0.66.1-win32\\uncrustifycheck.bat'
-    }
     }
     stage ('Build')
     {
