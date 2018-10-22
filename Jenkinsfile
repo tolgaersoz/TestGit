@@ -19,10 +19,6 @@ node
         bat '..\\..\\..\\..\\Users\\z003yjnz\\Downloads\\uncrustify-0.66.1-win32\\uncrustifycheck.bat'
     }
     }
-    stage('Uncrustify')
-    {
-        bat '..\\..\\..\\..\\Users\\z003yjnz\\Downloads\\uncrustify-0.66.1-win32\\uncrustifycheck.bat'
-    }
     stage ('Build')
     {
         build 'TestGit'
