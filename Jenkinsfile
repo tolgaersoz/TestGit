@@ -18,7 +18,9 @@ node
     }
     stage ('Execute bat')
     {
-        powershell ' .\\uncrustifycheck.bat'
+        dir('C:\\Program Files (x86)\\Jenkins\\workspace\\PipelineTest\\uncrustify-0.66.1-win32') {
+           powershell ' .\\uncrustifycheck.bat'
+}
     }
     stage ('Build')
     {
