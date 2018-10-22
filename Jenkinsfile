@@ -10,7 +10,13 @@ node
     {
         echo "Static Code Analysis"
     }
-    stage
+    stage('Change directory')
+    {
+       dir('powershell \'C:\\\\Users\\\\z003yjnz\\\\Downloads\\\\uncrustify-0.66.1-win32\\\\\'') {
+    // some block
+}
+    }
+    stage('Uncrustify')
     {
         powershell '.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
     }
