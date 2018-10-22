@@ -18,7 +18,7 @@ node
     }
     stage('Uncrustify')
     {
-        powershell '.\\uncrustify.exe -c .\\cfg\\defaults.cfg -f .\\Network.cpp  -o Networkfixed.cpp'
+        bat '.\\uncrustifycheck.bat'
     }
     stage ('Build')
     {
