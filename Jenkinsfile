@@ -36,7 +36,7 @@ node
     }
     stage ('Publish Report')
     {
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'C:\\Program Files (x86)\\Jenkins\\jobs\\PipelineTest\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'C:\\Program Files (x86)\\Jenkins\\jobs\\PipelineTest\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Rapor'])
     }
     
 }
