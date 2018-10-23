@@ -6,25 +6,25 @@ node
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9f76879f-9b5f-4176-b322-eaaafae3c8f3', url: 'https://github.com/tolgaersoz/TestGit.git']]])
         workspace =pwd()
     }
-    stage ('Change directory')
+    stage ('Build')
+    {
+        build 'TestGit'
+    }
+    //stage('Code Analysis-Step1')
+    //{
+      //  echo "Static Code Analysis"
+    //}
+    stage ('Code Analysis-Step1')
     {
         dir('C:\\Program Files (x86)\\Jenkins\\workspace\\PipelineTest\\uncrustify-0.66.1-win32') {
     // some block
 }
     }
-    stage ('Execute bat')
+    stage ('Code Analysis-Step2')
     {
         dir('C:\\Program Files (x86)\\Jenkins\\workspace\\PipelineTest\\uncrustify-0.66.1-win32') {
            powershell ' .\\uncrustifycheck.bat'
 }
-    }
-    stage ('Build')
-    {
-        build 'TestGit'
-    }
-    stage('Code Analysis')
-    {
-        echo "Static Code Analysis"
     }
     stage ('Unit Testing')
     {
