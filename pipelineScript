@@ -1,4 +1,4 @@
 node {
   stage 'Run JMeter Test'
-  sh '/home/siemens/Downloads/apache-jmeter-5.4.1/bin/jmeter.sh -n -t /home/siemens/Downloads/apache-jmeter-5.4.1/bin/Demo.jmx -l test.jtl'
+  sh '/home/siemens/Downloads/apache-jmeter-5.4.1/bin/jmeter.sh -n -t /home/siemens/Downloads/apache-jmeter-5.4.1/bin/Demo.jmx -jusers=30 -l test.jtl'
 }
